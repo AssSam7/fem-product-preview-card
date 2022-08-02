@@ -8,4 +8,11 @@ html {
   font-size: 62.5%;
   /* To make 1px = 10px instead of 16px */
 }
+
+/* Colors */
+/* Media Breakpoints */
+body {
+  background: #f2ebe3;
+  height: 100vh;
+}
 /*# sourceMappingURL=main.css.map */
