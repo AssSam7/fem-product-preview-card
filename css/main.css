@@ -1,3 +1,5 @@
+/* Colors */
+/* Media Breakpoints */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,10 +11,141 @@ html {
   /* To make 1px = 10px instead of 16px */
 }
 
-/* Colors */
-/* Media Breakpoints */
+@media screen and (max-width: 375px) {
+  html {
+    /* font-size: 50%; */
+  }
+}
+
 body {
   background: #f2ebe3;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    margin: 2rem;
+  }
+}
+
+.card {
+  overflow: hidden;
+  max-width: 40vw;
+  height: 55vh;
+  background: #fff;
+  border-radius: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    flex-direction: column;
+    min-width: 100%;
+    height: 100vh;
+    overflow: auto;
+  }
+}
+
+.card__preview {
+  flex: 1 1 0px;
+  min-width: 150px;
+}
+
+.card__preview img {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .card__preview {
+    height: 35vh;
+  }
+}
+
+.card__content {
+  flex: 1 1 0px;
+  padding: 2.5rem 0;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 375px) {
+  .card__content {
+    gap: 1rem;
+    padding-left: 2rem;
+    padding-top: 0;
+    height: 65vh;
+  }
+}
+
+.card__content--product_category {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #878da1;
+  letter-spacing: 0.4rem;
+}
+
+.card__content--product_name {
+  width: 70%;
+  font-family: "Fraunces", sans-serif;
+  font-size: 3rem;
+  color: #1c232b;
+}
+
+@media screen and (max-width: 375px) {
+  .card__content--product_name {
+    width: 90%;
+  }
+}
+
+.card__content--product_description {
+  width: 70%;
+  color: #6c7289;
+  font-size: 1.3rem;
+}
+
+.card__content--price {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.card__content--add {
+  cursor: pointer;
+  padding: 1.5rem 0;
+  color: #fff;
+  background: #428a70;
+  outline: none;
+  border: 0;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__content--add:hover {
+  background: #3d8068;
+}
+
+.current_price {
+  font-family: "Fraunces", sans-serif;
+  color: #428a70;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.original_price {
+  color: #6c7289;
+  font-size: 1.2rem;
+  text-decoration: line-through;
 }
 /*# sourceMappingURL=main.css.map */

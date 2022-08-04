@@ -6,4 +6,8 @@
 
 html {
   font-size: 62.5%; /* To make 1px = 10px instead of 16px */
+
+  @media screen and (max-width: $bp-mobile) {
+    /* font-size: 50%; */
+  }
 }

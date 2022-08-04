@@ -1,0 +1,110 @@
+.card {
+  overflow: hidden;
+  max-width: 40vw;
+  height: 55vh;
+  background: #fff;
+  border-radius: 1rem;
+
+  display: flex;
+  gap: 2rem;
+
+  @media screen and (max-width: $bp-mobile) {
+    flex-direction: column;
+    min-width: 100%;
+    height: 100vh;
+    overflow: auto;
+  }
+
+  &__preview {
+    flex: 1 1 0px;
+    min-width: 150px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    @media screen and (max-width: $bp-mobile) {
+      height: 35vh;
+    }
+  }
+
+  &__content {
+    flex: 1 1 0px;
+    padding: 2.5rem 0;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+
+    @media screen and (max-width: $bp-mobile) {
+      gap: 1rem;
+      padding-left: 2rem;
+      padding-top: 0;
+      height: 65vh;
+    }
+
+    &--product_category {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: lighten($color: $color-secondary-text, $amount: 10);
+      letter-spacing: 0.4rem;
+    }
+
+    &--product_name {
+      width: 70%;
+      font-family: "Fraunces", sans-serif;
+      font-size: 3rem;
+      color: $color-primary-text;
+
+      @media screen and (max-width: $bp-mobile) {
+        width: 90%;
+      }
+    }
+
+    &--product_description {
+      width: 70%;
+      color: $color-secondary-text;
+      font-size: 1.3rem;
+    }
+
+    &--price {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    &--add {
+      cursor: pointer;
+      padding: 1.5rem 0;
+      color: #fff;
+      background: darken($color: $color-primary, $amount: 10);
+      outline: none;
+      border: 0;
+      border-radius: 0.6rem;
+      font-weight: 700;
+
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background: darken($color: $color-primary, $amount: 13);
+      }
+    }
+  }
+}
+
+.current_price {
+  font-family: "Fraunces", sans-serif;
+  color: darken($color: $color-primary, $amount: 10);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.original_price {
+  color: $color-secondary-text;
+  font-size: 1.2rem;
+  text-decoration: line-through;
+}
